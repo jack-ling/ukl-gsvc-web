@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>html教程</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+<h1>我使用了外部样式文件来格式化文本 </h1>
+<p>我也是!</p>
+<br/>
+<br/>
+<br/>
+HTML 图像- 图像标签（ img>）和源属性（Src）(图像的 URL 地址)<br/>
+alt 属性用来为图像定义一串预备的可替换的文本<br/>
+<img src="pulpit.jpg" alt="Pulpit rock" width="304" height="228"><br/>
+<br/><br/>
+<h2>HTML 表格</h2>
+表格由 table> 标签来定义。每个表格均有若干行（由 tr> 标签定义），每行被分割为若干单元格（由 td> 标签定义）。<br/>
+字母 td 指表格数据（table data），即数据单元格的内容。数据单元格可以包含文本、图片、列表、段落、表单、水平线、表格等等。<br/>
+表格的表头使用 th> 标签进行定义。<br/>
+<table border="1">
+    <caption>表格标题</caption>
+    <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+    </tr>
+    <tr>
+        <td>row 1, cell 1</td>
+        <td>row 1, cell 2</td>
+    </tr>
+    <tr>
+        <td>row 2, cell 1</td>
+        <td>row 2, cell 2</td>
+    </tr>
+</table>
+<br/><br/>
+<h3>HTML 列表</h3>
+<p>无序列表</p>
+<ul>
+    <li>Coffee</li>
+    <li>Milk</li>
+</ul>
+<p>有序列表</p>
+<ol>
+    <li>Coffee</li>
+    <li>Milk</li>
+</ol>
+<p>自定义列表</p>
+<dl>
+    <dt>Coffee</dt>
+    <dd>- black hot drink</dd>
+    <dt>Milk</dt>
+    <dd>- white cold drink</dd>
+</dl>
+<br/><br/>
+<h4>HTML div> 和span> 列表</h4>
+div> 元素没有特定的意义。除此之外，由于它属于块级元素，浏览器会在其前后显示折行。如果与 CSS 一同使用，div> 元素可用于对大的内容块设置样式属性<br/>
+文档中的一个区域将显示为蓝色：<br/>
+<div style="color:#0000FF">
+    <h3>这是一个在 div 元素中的标题。</h3>
+    <p>这是一个在 div 元素中的文本。</p>
+    大大的打的阿达<br/>
+    大阿达阿达的阿达
+</div><br/>
+使用 span> 元素对文本中的一部分进行着色：
+<p>我的母亲有 <span style="color:blue">蓝色</span> 的眼睛。</p>
+下面的例子使用五个 div 元素来创建多列布局：<br/>
+<div id="container" style="width:500px">
+
+    <div id="header" style="background-color:#FFA500;">
+        <h1 style="margin-bottom:0;">主要的网页标题</h1></div>
+
+    <div id="menu" style="background-color:#FFD700;height:200px;width:100px;float:left;">
+        <b>菜单</b><br>
+        HTML<br>
+        CSS<br>
+        JavaScript</div>
+
+    <div id="content" style="background-color:#EEEEEE;height:200px;width:400px;float:left;">
+        内容在这里</div>
+
+    <div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+        版权 © runoob.com</div>
+
+</div>
+
+<br/><br/>
+<h4>HTML 表单和输入</h4>，
+<p>文本域（Text Fields）</p>
+多数情况下被用到的表单标签是输入标签（<input>）。<br>
+输入类型是由类型属性（type）定义的。大多数经常被用到的输入类型如下：<br>
+文本域通过input type="text"> 标签来设定,当用户要在表单中键入字母、数字等内容时，就会用到文本域。<br>
+<form>
+    First name: <input type="text" name="firstname"><br>
+    Last name: <input type="text" name="lastname">
+</form>
+<br>
+<p>密码字段</p>
+密码字段通过标签input type="password"> 来定义:
+<br>
+<form>
+    Password: <input type="password" name="pwd">
+</form>
+<br>
+<p>单选按钮（Radio Buttons）</p>
+input type="radio"> 标签定义了表单单选框选项
+<form>
+    <input type="radio" name="sex" value="male">Male<br>
+    <input type="radio" name="sex" value="female">Female
+</form>
+<br>
+<p>复选框（Checkboxes）</p>
+input type="checkbox"> 定义了复选框. 用户需要从若干给定的选择中选取一个或若干选项。
+<form>
+    <input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
+    <input type="checkbox" name="vehicle" value="Car">I have a car
+</form>
+<br>
+<p>提交按钮(Submit Button)</p>
+input type="submit"> 定义了提交按钮<br/>
+当用户单击确认按钮时，表单的内容会被传送到另一个文件。表单的动作属性定义了目的文件的文件名。由动作属性定义的这个文件通常会对接收到的输入数据进行相关的处理。:
+<form name="input" action="html_form_action.php" method="get">
+    Username: <input type="text" name="user">
+    <input type="submit" value="enter">
+</form>
+<br/><br/><br/>
+
+<h5>HTML 框架</h5>
+<p>Iframe - 设置高度与宽度</p>
+<iframe src="demo_iframe.htm" width="200" height="200"></iframe>
+<br/>
+<p>Iframe - 移除边框</p>
+frameborder 属性用于定义iframe表示是否显示边框。
+设置属性值为 "0" 移除iframe的边框:<br/>
+<iframe src="demo_iframe.htm" frameborder="0"></iframe><br/>
+<p>使用iframe来显示目标链接页面</p>
+iframe可以显示一个目标链接的页面
+目标链接的属性必须使用iframe的属性，如下实例:<br/>
+<iframe src="demo_iframe.htm" name="iframe_a"></iframe>
+<p><a href="http://www.runoob.com" target="iframe_a">RUNOOB.COM</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>..
